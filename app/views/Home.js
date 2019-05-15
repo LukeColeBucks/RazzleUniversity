@@ -6,7 +6,6 @@ import { Hero } from '../sections/Hero.js';
 import { Menu } from '../sections/Menu.js';
 import { createStackNavigator } from 'react-navigation';
 
-
 export class Home extends React.Component {
     static navigationOptions = {
         header: null
@@ -23,7 +22,6 @@ export class Home extends React.Component {
             </View>
         );
     }
-
 }
 
 const styles = StyleSheet.create({

@@ -9,7 +9,6 @@ export class Contact extends React.Component {
         header: null
     };
 
-
     constructor(props) {
         super(props);
         this.state = {
