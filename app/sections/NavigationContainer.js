@@ -2,6 +2,7 @@ import React from 'react';
 import { Home } from '../views/Home.js';
 import { Contact } from '../views/Contact.js';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
+import NewsApi from '../news/src/NewsApi.js';
 
 const MyRoutes = createStackNavigator({
   HomeRT: {
@@ -9,6 +10,9 @@ const MyRoutes = createStackNavigator({
   },
   ContactRT: {
     screen: Contact
+  },
+  NewsRT: {
+    screen: NewsApi
   },
 },
   {
