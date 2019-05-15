@@ -13,7 +13,7 @@ export class Menu extends React.Component {
         	<View style={styles.container}>
                 <View style={styles.buttonRow}>
                     <TouchableOpacity style={styles.buttonStyles} onPress={this.onPress}>
-                            <Text style={styles.buttonText}>LESSONS</Text>
+                            <Text style={styles.buttonText}>LECTURES</Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.buttonStyles} onPress={this.onPress}>
                         <Text style={styles.buttonText}>NOTES</Text>
@@ -22,7 +22,7 @@ export class Menu extends React.Component {
 
                 <View style={styles.buttonRow}>
                     <TouchableOpacity style={styles.buttonStyles} onPress={this.onPress}>
-                        <Text style={styles.buttonText}>BLOG</Text>
+                        <Text style={styles.buttonText}>NEWS</Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.buttonStyles} onPress={()=>this.props.navigate('ContactRT')}>
                         <Text style={styles.buttonText}>CONTACT</Text>
