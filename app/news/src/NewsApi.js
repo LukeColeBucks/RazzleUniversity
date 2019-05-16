@@ -1,9 +1,6 @@
 import React from 'react';
 import { FlatList } from 'react-native';
-
-// Import getNews function from news.js
 import { getNews } from './News.js';
-// We'll get to this one later
 import Article from './components/Article.js';
 
 export default class NewsApi extends React.Component {
@@ -12,7 +9,7 @@ export default class NewsApi extends React.Component {
     this.state = { articles: [], refreshing: true };
     this.fetchNews = this.fetchNews.bind(this);
   }
-  // Called after a component is mounted
+
   componentDidMount() {
     this.fetchNews();
    }
