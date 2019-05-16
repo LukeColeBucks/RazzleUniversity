@@ -45,7 +45,7 @@ export default class EventList extends React.Component {
             <ActionButton
             key="fab"
             onPress={this.handleAddEvent}
-            buttonColor="rgba(231, 76, 60, 1)"
+            buttonColor='#48BBEC'
             />
         ];
     }
@@ -57,5 +57,6 @@ const styles = StyleSheet.create({
         paddingTop: 20,
         backgroundColor: '#F3F3F3'
     }
+    
 });
 
