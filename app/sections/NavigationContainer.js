@@ -17,10 +17,16 @@ const MyRoutes = createStackNavigator({
     screen: NewsApi
   },
   EventRT: {
-    screen: Event
+    screen: Event,
+    navigationOptions: () => ({
+      title: 'Add a Deadline'
+    }),
   },
   EventListRT: {
-    screen: EventList
+    screen: EventList,
+    navigationOptions: () => ({
+      title: 'Your Deadlines'
+    }),
   }
 },
   {
