@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 import PropTypes from 'prop-types';
-import { formatDate, getCountdown } from './eventApi.js'
+import { formatDate, getCountdown } from './EventApi.js'
 
 export default function EventCard({ event }) {
     const {
@@ -31,10 +31,10 @@ export default function EventCard({ event }) {
                     <Text style={styles.counterText}>{minutes}</Text>
                     <Text style={styles.counterLabel}>MINUTES</Text>
                 </View>
-                <View style={styles.counter}>
+                {/* <View style={styles.counter}>
                     <Text style={styles.counterText}>{seconds}</Text>
                     <Text style={styles.counterLabel}>SECONDS</Text>
-                </View>
+                </View> */}
             </View>
         </View>
     );
