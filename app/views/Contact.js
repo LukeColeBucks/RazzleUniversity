@@ -5,9 +5,9 @@ import { Header } from '../sections/Header.js';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 
 export class Contact extends React.Component {
-    static navigationOptions = {
-        header: null
-    };
+    // static navigationOptions = {
+    //     header: null
+    // };
 
     constructor(props) {
         super(props);

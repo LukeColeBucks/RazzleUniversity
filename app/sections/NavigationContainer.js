@@ -2,6 +2,7 @@ import React from 'react';
 import { Home } from '../views/Home.js';
 import { Contact } from '../views/Contact.js';
 import Event from '../events/Event.js';
+import EventList from '../events/EventList.js';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 import NewsApi from '../news/src/NewsApi.js';
 
@@ -17,6 +18,9 @@ const MyRoutes = createStackNavigator({
   },
   EventRT: {
     screen: Event
+  },
+  EventListRT: {
+    screen: EventList
   }
 },
   {

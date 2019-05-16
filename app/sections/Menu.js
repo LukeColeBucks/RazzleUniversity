@@ -15,7 +15,7 @@ export class Menu extends React.Component {
                     <TouchableOpacity style={styles.buttonStyles} onPress={this.onPress}>
                             <Text style={styles.buttonText}>LECTURES</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.buttonStyles} onPress={()=>this.props.navigate('EventRT')}>
+                    <TouchableOpacity style={styles.buttonStyles} onPress={()=>this.props.navigate('EventListRT')}>
                         <Text style={styles.buttonText}>DEADLINES</Text>
                     </TouchableOpacity>
                 </View>

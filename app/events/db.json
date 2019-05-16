@@ -1,0 +1,24 @@
+{
+    "events": [
+        {
+            "title": "Release 1 course",
+            "date": "2018-06-15T00:00:00.000Z",
+            "id": "05dafc66-bd91-43a0-a752-4dc40f039144"
+        },
+        {
+            "title": "Release 2 course",
+            "date": "2018-06-15T13:32:00.000Z",
+            "id": "05dafc66-bd91-43a0-a752-2dc20f039231"
+        },
+        {
+            "title": "Release 3 course",
+            "date": "2018-06-15T14:25:00.000Z",
+            "id": "05dafc66-bd91-43a0-a752-1dc43f049145"
+        },
+        {
+            "title": "Release 4 course",
+            "date": "2018-06-15T10:09:00.000Z",
+            "id": "05dafc66-bd91-43a0-a752-5dc46f639166"
+        }
+    ]
+}
