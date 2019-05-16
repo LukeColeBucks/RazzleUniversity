@@ -4,8 +4,32 @@ import DateTimePicker from 'react-native-modal-datetime-picker';
 import {formatDateTime} from './EventApi.js';
 
 export default class Event extends React.Component {
+    state = {
+        title: null,
+        date: ''
+    };
+
     handleAddPress =()=> {
     // this.props.navigation.goBack();
+    }
+
+    handleChangeTitle = (value) => {
+        this.setState({ title: value })
+    }
+
+    handleDatePress = () => {
+        this.setState({showDatePicker: true});
+    }
+
+    handleDatePicked = (date) => {
+        this.setState({
+            date,
+        });
+        this.handleDatePickerHide();
+    }
+
+    handleDatePickerHide = () => {
+        this.setState({ showDatePicker: false});
     }
 
     render() {
@@ -17,6 +41,21 @@ export default class Event extends React.Component {
                         style={styles.text} 
                         placeholder="Event title"
                         spellCheck={false}
+                        value={this.state.title}
+                        onChangeText={this.handleChangeTitle}
+                    />
+                    <TextInput style={[styles.text, styles.borderTop]}
+                        placeholder="Deadline Date"
+                        spellCheck={false}
+                        value={formatDateTime(this.state.date.toString())}
+                        editable={!this.state.showDatePicker}
+                        onFocus={this.handleDatePress}
+                    />
+                    <DateTimePicker
+                        isVisible={this.state.showDatePicker}
+                        mode="datetime"
+                        onConfirm={this.handleDatePicked}
+                        onCancel={this.handleDatePickerHide}
                     />
                 </View>
                 <TouchableHighlight 
@@ -54,5 +93,9 @@ const styles = StyleSheet.create({
     buttonText: {
         color: '#fff',
         fontSize: 18
+    },
+    borderTop: {
+        borderColor: '#939393',
+        borderTopWidth: 0.3
     }
 });

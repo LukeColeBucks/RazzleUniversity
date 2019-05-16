@@ -1,6 +1,6 @@
 import moment from 'moment';
 
-export function formatDate(dateString) {
+export function formatDateTime(dateString) {
     const parsedDate = moment(new Date(dateString));
 
     if(!parsedDate.isValid()) {
@@ -9,6 +9,16 @@ export function formatDate(dateString) {
 
     return parsedDate.format('H A on D MMM YYYY');
 }
+
+export function formatDate(dateString) {
+    const parsed = moment(new Date(dateString));
+  
+    if (!parsed.isValid()) {
+      return dateString;
+    }
+  
+    return parsed.format('D MMM YYYY');
+  }
 
 export function getCountdown(eventDate) {
     const duration = moment.duration(moment(new Date(eventDate)).diff(new Date()));
