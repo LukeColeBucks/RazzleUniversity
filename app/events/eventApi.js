@@ -7,7 +7,7 @@ export function formatDate(dateString) {
         return dateString;
     }
 
-    return parsedDate.format('D MMM YYYY');
+    return parsedDate.format('H A on D MMM YYYY');
 }
 
 export function getCountdown(eventDate) {

@@ -5,25 +5,25 @@ import { Header } from '../sections/Header.js';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 
 export class Contact extends React.Component {
-    // static navigationOptions = {
-    //     header: null
-    // };
+    static navigationOptions = {
+        header: null
+    }; //use to remove header with back button.
 
     constructor(props) {
         super(props);
-        this.state = {
-            msg: 'Your Message?',
-            name: 'What is your name?',
-            email: 'And what is your email?'
-        }
+        // this.state = {
+        //     msg: 'Your Message?',
+            // name: 'What is your name?',
+        //     email: 'And what is your email?'
+        // }
     }
 
     sendMessage=()=> {
-        Alert.alert("Welcome Home, " + this.state.name, "We've received your email, give us 1-3 days to get back to you.");
+        Alert.alert("Welcome Home, We've received your email, give us 1-3 days to get back to you.");
         this.props.navigation.goBack();
     }
 
-    clearFields=()=> this.setState({name: "", msg: "", email: ""});
+    // clearFields=()=> this.setState({name: "", msg: "", email: ""});
 
     render() {
         return (
@@ -32,21 +32,24 @@ export class Contact extends React.Component {
                 <Text style={styles.heading}>Contact Us</Text>
                 <TextInput 
                     style={styles.inputs}
-                    onChangeText={(text) => this.setState({name: text})}
-                    value={this.state.name}
+                    placeholder="Your name?"
+                    // onChangeText={(text) => this.setState({name: text})}
+                    // value={this.state.name}
                 />
                 <TextInput 
                     style={styles.multiInput}
-                    onChangeText={(text) => this.setState({msg: text})}
-                    value = {this.state.msg}
+                    placeholder="Your message?"
+                    // onChangeText={(text) => this.setState({msg: text})}
+                    // value = {this.state.msg}
                     multiline = {true}
                     numberOfLines = {5}
                 />
                  <TextInput 
                     style={styles.inputs}
-                    onChangeText={(text) => this.setState({email: text})}
-                    value={this.state.email}
-                    underlineColo
+                    placeholder="Your email address?"
+                    // onChangeText={(text) => this.setState({email: text})}
+                    // value={this.state.email}
+                    // underlineColo
                 />
 
                 <TouchableHighlight underlayColor='#206778'>

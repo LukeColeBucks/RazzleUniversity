@@ -1,6 +1,8 @@
 import React from 'react';
 import { View, Text, TouchableHighlight, TextInput, StyleSheet } from 'react-native';
 import DateTimePicker from 'react-native-modal-datetime-picker';
+import {formatDateTime} from './EventApi.js';
+
 export default class Event extends React.Component {
     handleAddPress =()=> {
     // this.props.navigation.goBack();
