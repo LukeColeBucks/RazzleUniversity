@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, TouchableHighlight, TextInput, StyleSheet } from 'react-native';
 import DateTimePicker from 'react-native-modal-datetime-picker';
-import {formatDateTime} from './EventApi.js';
+import {formatDateTime, saveEvent} from './EventApi.js';
 
 export default class Event extends React.Component {
     state = {
@@ -10,7 +10,7 @@ export default class Event extends React.Component {
     };
 
     handleAddPress =()=> {
-    // this.props.navigation.goBack();
+        saveEvent(this.state).then(() => this.props.navigation.goBack());
     }
 
     handleChangeTitle = (value) => {

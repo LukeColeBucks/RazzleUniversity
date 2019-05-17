@@ -19,7 +19,14 @@ export default class EventList extends React.Component {
             });
         }, 1000);
         
-        getEvents().then(events => this.setState({ events }));
+        // getEvents().then(events => this.setState({ events }));
+
+        this.props.navigation.addListener(
+            'didFocus',
+            () => {
+              getEvents().then(events => this.setState({ events }));
+            }
+          );  
 
         // const eventDb = require('./db.json').events.map(appendDate => ({
         //     ...appendDate,
