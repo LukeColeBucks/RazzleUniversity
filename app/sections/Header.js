@@ -20,7 +20,7 @@ export class Header extends React.Component {
             <View style={styles.headStyle}>
                 <Image 
                     style={styles.logoStyle} 
-                    source={ require('./img/Globo_logo_REV.png')} 
+                    source={ require('./img/campus-logo.png')} 
                 />
                 <Text 
                     style={styles.headText} 
