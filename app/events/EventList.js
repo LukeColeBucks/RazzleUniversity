@@ -2,10 +2,11 @@ import React from 'react';
 import { FlatList, Text, StyleSheet } from 'react-native';
 import EventCard from './EventCard.js';
 import ActionButton from 'react-native-action-button';
+import { getEvents } from './EventApi.js';
 
 export default class EventList extends React.Component {
     state = {
-        events: []
+        events: [],
     }
 
     componentDidMount() {
@@ -17,12 +18,13 @@ export default class EventList extends React.Component {
                 })),
             });
         }, 1000);
+        
+        getEvents().then(events => this.setState({ events }));
 
-        const eventDb = require('./db.json').events.map(appendDate => ({
-            ...appendDate,
-            date: new Date(appendDate.date)
-        }));
-        this.setState({ eventDb });
+        // const eventDb = require('./db.json').events.map(appendDate => ({
+        //     ...appendDate,
+        //     date: new Date(appendDate.date)
+        // })); for local, no need due to expo use.
     }
 
     handleAddEvent =()=> {
@@ -33,7 +35,7 @@ export default class EventList extends React.Component {
         return [
             <FlatList
                 key="flatlist"
-                data={this.state.eventDb}
+                data={this.state.events}
                 style={styles.list}
                 keyExtractor={item => item.id}
                 renderItem={({ item, seperators}) => (
@@ -44,8 +46,8 @@ export default class EventList extends React.Component {
             />,
             <ActionButton
             key="fab"
-            onPress={this.handleAddEvent}
             buttonColor='#48BBEC'
+            onPress={this.handleAddEvent}
             />
         ];
     }

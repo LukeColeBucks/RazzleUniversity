@@ -31,10 +31,10 @@ export default function EventCard({ event }) {
                     <Text style={styles.counterText}>{minutes}</Text>
                     <Text style={styles.counterLabel}>MINUTES</Text>
                 </View>
-                {/* <View style={styles.counter}>
+                <View style={styles.counter}>
                     <Text style={styles.counterText}>{seconds}</Text>
                     <Text style={styles.counterLabel}>SECONDS</Text>
-                </View> */}
+                </View>
             </View>
         </View>
     );
