@@ -1,4 +1,30 @@
 {
-  "name": "reactTutorial",
-  "displayName": "reactTutorial"
+  "expo": {
+    "name": "reactTutorial",
+    "slug": "reactTutorial",
+    "privacy": "public",
+    "sdkVersion": "32.0.0",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "packagerOpts": {
+      "assetExts": ["ttf", "otf"]
+    },
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "splash": {
+      "resizeMode": "contain",
+      "backgroundColor": "#262626"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    }
+  }
 }
