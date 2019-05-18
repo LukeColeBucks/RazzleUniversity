@@ -15,7 +15,7 @@ import * as Expo from 'expo';
     3. expo start
 */
 const endpoint = 'events'
-const url = `https://foolish-crab-85.localtunnel.me/${endpoint}`;
+const url = `https://application-mock-server.localtunnel.me/${endpoint}`;
 
 export function saveEvent({ title, date }) {
     return fetch(url, {
