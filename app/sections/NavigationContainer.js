@@ -5,6 +5,7 @@ import Event from '../events/Event.js';
 import EventList from '../events/EventList.js';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 import NewsApi from '../news/src/NewsApi.js';
+import { Video } from '../views/Video.js';
 
 const MyRoutes = createStackNavigator({
   HomeRT: {
@@ -15,6 +16,9 @@ const MyRoutes = createStackNavigator({
   },
   NewsRT: {
     screen: NewsApi
+  },
+  LecturesRT: {
+    screen: Video
   },
   EventRT: {
     screen: Event,
